@@ -33,6 +33,7 @@ io.on('connection', (socket) => {
   if (question !== null) {
     socket.emit('question', {
       prompt: question.prompt,
+      time: question.time,
       options: question.options.map(option => option.value)
     })
   }
