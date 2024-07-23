@@ -15,6 +15,10 @@ const io = new Server(server, {
 
 app.use(cors())
 
+app.get('/', (_, res) => {
+  res.json({ 'status': 'ok' })
+})
+
 let response = null
 let question = null
 let count = 0
